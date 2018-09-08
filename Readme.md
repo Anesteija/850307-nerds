@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Anastasiya](https://up.htmlacademy.ru/htmlcss/22/user/850307).
-* Наставник: [Дмитрий Батманов] (https://htmlacademy.ru/profile/id10964).
+* Наставник: [Дмитрий Батманов] 
 
 ---
 
