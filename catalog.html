@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>	   
 	<html lang="ru">	   
 	<head>	   
@@ -7,29 +8,28 @@
 		<link rel="stylesheet" href="css/normalize.css">	   
 		<link rel="stylesheet" href="css/style.css">	   
 		<script src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=ru&amp;key=AIzaSyBcww66NsvVEJ3mC0ZPtGaDg58RKY9M4AI'></script>	   
-	   
 	</head>	   
 	<body>	   
 		<header class="main-header">	   
-			<div class="container clearfix">	   
+			<div class="inner-container clearfix">	   
 				<div class="logo">	   
-					<img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Nёrd's"></div>	   
+					<a href="index.html">	   
+						<img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Nёrd's"></a>	   
+				</div>	   
 				<nav class="main-nav">	   
 					<ul>	   
-						<li class="main-nav-active">	   
-							<span>Студия</span>	   
+						<li>	   
+							<a href="index.html">Студия</a>	   
 						</li>	   
 						<li>	   
 							<a href="#">Клиенты</a>	   
 						</li>	   
-						<li>	   
+						<li class="main-nav-active">	   
 							<a href="shop.html">Магазин</a>	   
 						</li>	   
 						<li>	   
 							<a href="#">Контакты</a>	   
 						</li>	   
-	
-	   
 					</ul>	   
 				</nav>	   
 				<div class="cart">	   
@@ -38,136 +38,232 @@
 	
 	   
 			</div>	   
-			<div class="slider">	   
-				<input type="radio" id="btn1" name="toggle" checked>	   
-				<input type="radio" id="btn2" name="toggle">	   
-				<input type="radio" id="btn3" name="toggle">	   
-				<div class="slider-control">	   
-					<label for="btn1"></label>	   
-					<label for="btn2"></label>	   
-					<label for="btn3"></label>	   
+			<div class="inner-title">	   
+				<h1>	   
+					Добро пожаловать в магазин	   
+					<br>готовых макетов</h1>	   
 	
 	   
-				</div>	   
-				<div class="slides">	   
-					<div class="slide">	   
-						<div class="slide-text">	   
-							<div class="slide-title">	   
-								Долго, дорого, 	   
-	скрупулезно.	   
-							</div>	   
-							<p>	   
-								Математически выверенный дизайн	   
-								<br>для вашего сайта или мобильного приложения.</p>	   
-							<a class="btn-slide" href="#">Узнать больше</a>	   
-						</div>	   
-					</div>	   
-					<div class="slide">	   
-						<div class="slide-text">	   
-							<div class="slide-title">	   
-								Любите ли вы математику,	   
-	как любим ее мы?	   
-							</div>	   
-							<p>	   
-								Нашим дизайнерам мы удаляем нейроны, ответственные	   
-	за креатив, чтобы дать им возможность все просчитать	   
-							</p>	   
-							<a class="btn-slide" href="#">Узнать больше</a>	   
-						</div>	   
-					</div>	   
-					<div class="slide">	   
-						<div class="slide-text">	   
-							<div class="slide-title">	   
-								Только наркотики,	   
-								<br>только хардкор!</div>	   
-							<p>	   
-								Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов	   
-							</p>	   
-							<a class="btn-slide" href="#">Узнать больше</a>	   
-						</div>	   
-					</div>	   
-				</div>	   
 			</div>	   
 		</header>	   
 		<main class="container">	   
-			<div class="works clearfix">	   
-				<div class="works-item">	   
-					<div class="feat feat1"></div>	   
-					<h2 class="works-name">Веб-сайты</h2>	   
-					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>	   
+			<div class="main-catalog clearfix">	   
+				<div class="left-form">	   
+					<form action="#" method="get">	   
+						<div class="left-form-filter">	   
+							<h2>Стоимость:</h2>	   
+							<div class="range-controls">	   
+								<div class="scale"><div class="bar"></div></div>	   
+								<div class="toggle min-toggle"></div>	   
+								<div class="toggle max-toggle"></div>	   
+							</div>	   
+							<div class="price-controls">	   
+								<label>от <input class="min-price" type="text" value="0"></label>	   
+								<div class="max-price-absolute"><label>до <input class="max-price" type="text" value="15 000"></label></div>	   
+							</div>	   
+						</div>	   
+						<h2>Сетка:</h2>	   
+						<label class="left-form-radio">	   
+							<input type="radio" value="responsive" name="grid" checked>	   
+							<span class="radio-indicator"></span>	   
+							Адаптивная	   
+						</label>	   
+						<label class="left-form-radio">	   
+							<input type="radio" value="fixed" name="grid">	   
+							<span class="radio-indicator"></span>	   
+							Фиксированная	   
+						</label>	   
+						<label class="left-form-radio">	   
+							<input type="radio" value="fluid" name="grid">	   
+							<span class="radio-indicator"></span>	   
+							Резиновая	   
+						</label>	   
+						<h2>Особенности:</h2>	   
+						<label class="left-form-checkbox">	   
+							<input type="checkbox" name="slider" checked>	   
+							<span class="checkbox-indicator"></span>	   
+							Слайдер	   
+						</label>	   
+						<label class="left-form-checkbox">	   
+							<input type="checkbox" name="features">	   
+							<span class="checkbox-indicator"></span>	   
+							Блок преимуществ	   
+						</label>	   
+						<label class="left-form-checkbox">	   
+							<input type="checkbox" name="news" checked>	   
+							<span class="checkbox-indicator"></span>	   
+							Новости	   
+						</label>	   
+						<label class="left-form-checkbox">	   
+							<input type="checkbox" name="gallery">	   
+							<span class="checkbox-indicator"></span>	   
+							Галерея	   
+						</label>	   
+						<label class="left-form-checkbox">	   
+							<input type="checkbox" name="cart">	   
+							<span class="checkbox-indicator"></span>	   
+							Корзина	   
+						</label>	   
 	
 	   
-					<a href="#" class="red">Заказать</a>	   
-	
-	   
+						<button class="btn-left-form" type="button">Показать</button>	   
+					</form>	   
 				</div>	   
-				<div class="works-item">	   
-					<div class="feat feat2"></div>	   
-					<h2 class="works-name">Приложения</h2>	   
-					<p>	   
-						Покорите топ-10 приложений	   
-	в AppStrore и Google Play	   
-					</p>	   
-	
-	   
-					<a href="#" class="green">Заказать</a>	   
-	
-	   
-				</div>	   
-				<div class="works-item">	   
-					<div class="feat feat3"></div>	   
-					<h2 class="works-name">Презентации</h2>	   
-					<p>	   
-						Вы даже не подозреваете, 	   
-	насколько вы изумительны!	   
-					</p>	   
-					<a href="#" class="yellow">Заказать</a>	   
-				</div>	   
-			</div>	   
-			<div class="line"></div>	   
-			<div class="about-us clearfix">	   
-				<div class="left-about-us">	   
-					<p class="about-title"> <b>Мы — маленькая, но гордая	   
-	дизайн-студия из Краснодара.</b> 	   
-					</p>	   
-					<p class="about-text">	   
-						Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.	   
-					</p>	   
-					<p style="text-transform: uppercase; margin-bottom: 22px;">Выполняем заказы на разработку:</p>	   
-					<ul>	   
-						<li>Веб-сайтов любой сложности</li>	   
-						<li>Мобильных приложений для iOS и Android</li>	   
-						<li>Слайдшоу и видео для корпоративных презентаций</li>	   
+				<div class="catalog">	   
+					<ul class="items-filter">	   
+						<li>Сортировать:</li>	   
+						<li>	   
+							<span class="catalog-filter-active">по цене</span>	   
+						</li>	   
+						<li>	   
+							<a href="#">по типу</a>	   
+						</li>	   
+						<li>	   
+							<a href="#">по функционалу</a>	   
+						</li>	   
+						<li>	   
+							<a class="catalog-sort-down sort-arrow-active" href=#>по убыванию</a>	   
+						</li>	   
+						<li>	   
+							<a class="catalog-sort-up" href=#>по возрастанию</a>	   
+						</li>	   
 					</ul>	   
-				</div>	   
-				<div class="right-about-us">	   
-					<img src="img/logo-since.png" width="240" height="119" alt="Дизайн-студия Nёrd's">	   
-					<p>КАК Мы работаем:</p>	   
-					<ul>	   
-						<li>С самоотдачей 146%</li>	   
-						<li>Соблюдая сроки на 100%</li>	   
-						<li>По предоплате 50%</li>	   
-					</ul>	   
+					<div class="catalog-items">	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item1.jpg" alt="Макет Aviator"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>Aviator</h3>	   
+								<p class="item-description">	   
+									Одностраничный макет	   
+	с авторским дизайном	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">8000 р.</a>	   
+								</div>	   
+							</div>	   
+	
+	   
+						</div>	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item2.jpg" alt="Макет Sunset"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>Sunset</h3>	   
+								<p class="item-description">	   
+									Интернет-магазин	   
+	с личным кабинетом	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">10000 р.</a>	   
+								</div>	   
+							</div>	   
+						</div>	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item3.jpg" alt="Макет Forte"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>Forte</h3>	   
+								<p class="item-description">	   
+									Отличный макет	   
+	для личного блога	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">5000 р.</a>	   
+								</div>	   
+							</div>	   
+						</div>	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item4.jpg" alt="Макет Modern Organic	   
+	THAI"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>	   
+									Modern Organic	   
+	THAI	   
+								</h3>	   
+								<p class="item-description">	   
+									Сайт для ресторана	   
+	быстрого питания	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">12000 р.</a>	   
+								</div>	   
+							</div>	   
+						</div>	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item5.jpg" alt="Макет AVENUE"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>AVENUE</h3>	   
+								<p class="item-description">	   
+									Макет для блога 	   
+	о путешествиях	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">8000 р.</a>	   
+								</div>	   
+							</div>	   
+						</div>	   
+						<div class="catalog-item">	   
+							<div class="catalog-circles">	   
+								<ul>	   
+									<li></li>	   
+									<li></li>	   
+									<li></li>	   
+								</ul>	   
+							</div>	   
+							<div class="catalog-img">	   
+								<img src="img/catalog-item6.jpg" alt="Макет DOVETAIL"></div>	   
+							<div class="catalog-item-action">	   
+								<h3>DOVETAIL</h3>	   
+								<p class="item-description">	   
+									Интернет-магазин	   
+	с галереей товаров	   
+								</p>	   
+								<div class="btn-item-price">	   
+									<a href="#">14000 р.</a>	   
+								</div>	   
+							</div>	   
+						</div>	   
+					</div>	   
 				</div>	   
 			</div>	   
-			<div class="line"></div>	   
-			<div class="links ">	   
-				<ul class="links-list clearfix">	   
-					<li class="links-item links-item1">	   
-						<a href="#">	   
-							<img src="img/gluk.png" width="198" height="37" alt="Сайт Glukhanko"></a>	   
-					</li>	   
-					<li class="links-item links-item2">	   
-						<a href="#">	   
-							<img src="img/htmlac.png" width="199" height="68" alt="Сайт HtmlAcademy"></a>	   
-					</li>	   
-					<li class="links-item">	   
-						<a href="#">	   
-							<img src="img/barber.png" width="209" height="90" alt="Сайт барбершопа"></a>	   
-					</li>	   
-				</ul>	   
-			</div>	   
-			<div class="line"></div>	   
 		</main>	   
 		<footer>	   
 			<div id='Nerds'></div>	   
