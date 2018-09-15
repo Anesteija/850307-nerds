@@ -3,18 +3,72 @@
 	<html lang="ru">	   
 	<head>	   
 		<meta charset="UTF-8">	   
-		<title>Nerds</title>	   
+		<title>HTML Academy: Нёрдс</title>	   
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>	   
 		<link rel="stylesheet" href="css/normalize.css">	   
 		<link rel="stylesheet" href="css/style.css">	   
-		<script src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=ru&amp;key=AIzaSyBcww66NsvVEJ3mC0ZPtGaDg58RKY9M4AI'></script>	   
+		
+		<script src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=ru&amp;key=AIzaSyBcww66NsvVEJ3mC0ZPtGaDg58RKY9M4AI'></script>
+
+	<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(59.938878,30.320763),
+            zoom: 17,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('Nerds');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Nеrds', 'undefined', 'undefined', 'undefined', 'undefined', 59.938609692246615, 30.323690467598, './img/map-marker.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+}
+</script>
+		
 	</head>	   
 	<body>	   
 		<header class="main-header">	   
 			<div class="inner-container clearfix">	   
 				<div class="logo">	   
 					<a href="index.html">	   
-						<img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Nёrd's"></a>	   
+						<img src="img/nerds-logo.png" width="139" height="56" alt="Дизайн-студия Nёrd's"></a>	   
 				</div>	   
 				<nav class="main-nav">	   
 					<ul>	   
@@ -40,8 +94,8 @@
 			</div>	   
 			<div class="inner-title">	   
 				<h1>	   
-					Добро пожаловать в магазин	   
-					<br>готовых макетов</h1>	   
+					магазин	   
+					<br>готовых шаблонов</h1>	   
 	
 	   
 			</div>	   
@@ -77,9 +131,15 @@
 							<input type="radio" value="fluid" name="grid">	   
 							<span class="radio-indicator"></span>	   
 							Резиновая	   
-						</label>	   
+						</label>	
+
+
+
+						
 						<h2>Особенности:</h2>	   
-						<label class="left-form-checkbox">	   
+						<label class="left-form-checkbox">	  
+ <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="slider" name="properties"
+                  value="slider" checked>						
 							<input type="checkbox" name="slider" checked>	   
 							<span class="checkbox-indicator"></span>	   
 							Слайдер	   
@@ -138,15 +198,14 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item1.jpg" alt="Макет Aviator"></div>	   
+								<img src="img/img-sedona.jpg" alt="Пример работы, сайт — Sedona"></div>	   
 							<div class="catalog-item-action">	   
-								<h3>Aviator</h3>	   
+								<h3>Sedona</h3>	   
 								<p class="item-description">	   
-									Одностраничный макет	   
-	с авторским дизайном	   
+									Информационный сайт для туристов	   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">8000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 	
@@ -161,15 +220,14 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item2.jpg" alt="Макет Sunset"></div>	   
+								<img src="img/img-pink.jpg" alt="Пример работы, сайт — PINK"></div>	   
 							<div class="catalog-item-action">	   
-								<h3>Sunset</h3>	   
+								<h3>PINK APP</h3>	   
 								<p class="item-description">	   
-									Интернет-магазин	   
-	с личным кабинетом	   
+									Продуктовый лендинг приложения для iOS и Android	   	   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">10000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 						</div>	   
@@ -182,15 +240,14 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item3.jpg" alt="Макет Forte"></div>	   
+								<img src="img/img-borodin.jpg" alt="Пример работы, сайт — Barbershop BORODINSKI"></div>	   
 							<div class="catalog-item-action">	   
-								<h3>Forte</h3>	   
+								<h3>Barbershop</h3>	   
 								<p class="item-description">	   
-									Отличный макет	   
-	для личного блога	   
+									Сайт салона красоты, для мужчин, да	   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">5000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 						</div>	   
@@ -203,19 +260,17 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item4.jpg" alt="Макет Modern Organic	   
+								<img src="img/img-mishka.jpg" alt="Пример работы, сайт — MISHKA">	   
 	THAI"></div>	   
 							<div class="catalog-item-action">	   
 								<h3>	   
-									Modern Organic	   
-	THAI	   
+									MISHKA	   	   
 								</h3>	   
 								<p class="item-description">	   
-									Сайт для ресторана	   
-	быстрого питания	   
+									Интернет-магазин вязанных игрушек 	   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">12000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 						</div>	   
@@ -228,15 +283,14 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item5.jpg" alt="Макет AVENUE"></div>	   
+								<img src="img/img-plus.jpg" alt="Пример работы, сайт — A+"></div>	   
 							<div class="catalog-item-action">	   
-								<h3>AVENUE</h3>	   
+								<h3>A PLUS</h3>	   
 								<p class="item-description">	   
-									Макет для блога 	   
-	о путешествиях	   
+									Лендинг курсов повышения квалификации   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">8000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 						</div>	   
@@ -249,15 +303,14 @@
 								</ul>	   
 							</div>	   
 							<div class="catalog-img">	   
-								<img src="img/catalog-item6.jpg" alt="Макет DOVETAIL"></div>	   
+								<img src="img/img-kvast.jpg" alt="Пример работы, сайт — КВАСТ"></div>	   
 							<div class="catalog-item-action">	   
-								<h3>DOVETAIL</h3>	   
+								<h3>Кваст</h3>	   
 								<p class="item-description">	   
-									Интернет-магазин	   
-	с галереей товаров	   
+									Промо-сайт производителя крафтового кваса	   
 								</p>	   
 								<div class="btn-item-price">	   
-									<a href="#">14000 р.</a>	   
+									<a href="#">9900 р.</a>	   
 								</div>	   
 							</div>	   
 						</div>	   
@@ -311,7 +364,8 @@
 				<button class="btn-form" type="submit">Отправить</button>	   
 			</form>	   
 		</div>	   
-		<div class="overlay"></div>	   
-		<script src="js/popup.js"></script>	   
+		<div class="overlay"></div>	 
+<img src="img/maps(1).jpg" width="139" height="56" ></a>		
+		<script src="js/script.js"></script>	   
 	</body>	   
 	</html>	 
